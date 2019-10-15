@@ -14,8 +14,7 @@ public class StockTrackerTest {
         StockTracker stockTracker = new StockTracker();
 
         stockTracker.addStock(new StockEntry(StockType.chocolate, 5));
-        Predicate<StockEntry> stockEntryPredicate = (stockEntry ->
-                stockEntry.getStockType().equals(StockType.chocolate));
+        Predicate<StockEntry> stockEntryPredicate = (stockEntry -> stockEntry.getStockType().equals(StockType.chocolate));
 
         assertEquals(1, stockTracker.getStockEntries(stockEntryPredicate).size());
     }
